@@ -201,7 +201,7 @@ function show_git_info {
             "git_untracked_files_icon"\
             "git_untracked_files_color"\
             "git_untracked_files_bg"\
-            ""\
+            "b"\
             "$is_untracked_files"\
         )
 
@@ -209,7 +209,7 @@ function show_git_info {
             "git_changes_not_staged_for_commit_icon"\
             "git_changes_not_staged_for_commit_color"\
             "git_changes_not_staged_for_commit_bg"\
-            ""\
+            "b"\
             "$is_changes_not_staged_for_commit"\
         )
 
@@ -217,7 +217,7 @@ function show_git_info {
             "git_changes_to_be_committed_icon"\
             "git_changes_to_be_committed_color"\
             "git_changes_to_be_committed_bg"\
-            ""\
+            "b"\
             "$is_changes_to_be_committed"\
         )
 

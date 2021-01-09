@@ -54,7 +54,7 @@ function _theme {
     local darkOrange=208   # #ff8700
     local orange1=214      # #ffaf00
     local gold1=220        # #ffd700
-    
+
     local red='203'
     local green='40'
     local yellow='220'
@@ -70,26 +70,28 @@ function _theme {
     # git module
     # ###################################
 
-    local git_stash_icon='\uf005 '
+    local git_stash_icon='★ '
     local git_stash_color=$darkOrange
     local git_stash_bg
 
     local git_hash_color=$grey62
     local git_hash_bg
 
-    local git_untracked_files_icon=' \uf067 '
+    # local git_untracked_files_icon=' ✚ '
+    local git_untracked_files_icon=' U '
     local git_untracked_files_color=$indianRed1
     local git_untracked_files_bg=$grey23
 
-    local git_changes_not_staged_for_commit_icon=' \uf067 '
+    # local git_changes_not_staged_for_commit_icon=' 𝗠 '
+    local git_changes_not_staged_for_commit_icon=' M '
     local git_changes_not_staged_for_commit_color=$gold1
     local git_changes_not_staged_for_commit_bg=$grey35
 
-    local git_changes_to_be_committed_icon=' \uf0c9 '
+    local git_changes_to_be_committed_icon=' ☰ '
     local git_changes_to_be_committed_color=$green3
     local git_changes_to_be_committed_bg=$grey23
 
-    local git_has_conflicts_icon=' \uf05e '
+    local git_has_conflicts_icon=' ✖ '
     local git_has_conflicts_color=$indianRed1
     local git_has_conflicts_bg=$grey19
 
@@ -104,7 +106,8 @@ function _theme {
     local git_up_symbol_icon='⬆'
     local git_down_symbol_icon='⬇'
 
-    local git_synchronized_with_remote_icon='\uf021'
+    # local git_synchronized_with_remote_icon='↻'
+    local git_synchronized_with_remote_icon='⮂'
     local git_arrows_color=$gold1
     local git_arrows_bg=$grey7
 
@@ -134,12 +137,12 @@ function _theme {
     local hostname='%m'
     local username='%n'
     local working_directory='%~'
-    local shell_run_user_icon='\uf054'
-    local shell_run_root_icon='\uf292'
+    local shell_run_user_icon='❱'
+    local shell_run_root_icon='#'
     local cmd_time='%*'
     local cmd_date=" | %w "
-    local cmd_status_ok_icon=' \uf00c '
-    local cmd_status_error_icon=' \uf00d '
+    local cmd_status_ok_icon=' ✔ '
+    local cmd_status_error_icon=' ✖ '
 
     echo "${(P)var}"
 }
