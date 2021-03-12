@@ -10,6 +10,7 @@ function _show {
     local color=$3
     local background=$4
     local formatting=$5
+    local text=$6
 
     if [[ -n $icon ]]; then icon=$(_theme "$icon") ; fi
     if [[ -n $value ]]; then value=$(_theme "$value") ; fi
@@ -34,9 +35,9 @@ function _show {
     fi
 
     if [[ -z $background ]]; then
-        echo "${formatting_start}%F{$color}${icon}${value}%f${formatting_end}"
+        echo "${formatting_start}%F{$color}${icon}${value}${text}%f${formatting_end}"
     else
         background=$(_theme "$background")
-        echo "${formatting_start}%K{$background}%F{$color}${icon}${value}%f%k${formatting_end}"
+        echo "${formatting_start}%K{$background}%F{$color}${icon}${value}${text}%f%k${formatting_end}"
     fi
 }

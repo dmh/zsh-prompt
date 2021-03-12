@@ -127,6 +127,15 @@ function _theme {
 
 
     # ###################################
+    # docker
+    # ###################################
+    local container_status_ok='⬆ '
+    local container_status_exit='⬇ '
+    # ===============================================
+
+
+
+    # ###################################
     # prompt
     # ###################################
 
@@ -157,7 +166,7 @@ function _theme {
 PROMPT="
 
 $(_show "frame_start_icon" "" "grey27" "" "b") \
-$(_show "" "working_directory" "cyan")
+$(_show "" "working_directory" "cyan")\$(show_docker_info)
 \
 $(_show "frame_middle_icon" "" "grey27" "" "b") \
 \$(show_git_info)

@@ -6,6 +6,8 @@ SCRIPT_SOURCE=${0%/*}
 source "$SCRIPT_SOURCE/lib/git.sh"
 # shellcheck source=lib/helpers.sh
 source "$SCRIPT_SOURCE/lib/helpers.sh"
+# shellcheck source=lib/docker.sh
+source "$SCRIPT_SOURCE/lib/docker.sh"
 
 
 if [[ -n "$1" && -f "$1" ]]; then
