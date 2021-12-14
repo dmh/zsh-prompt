@@ -42,14 +42,14 @@ function show_env_info {
 }
 
 function show_docker_info {
-    dcps=$(docker-compose ps 2> /dev/null)
+    dcps=$(docker compose ps 2> /dev/null)
     cmd_status=$?
-    if [[ $cmd_status -ne 1 ]];
+    if [[ $cmd_status -lt 1 ]];
     then
         icon=$(_show "frame_middle_icon" "" "grey27" "" "b")
         title=$(_show "" "" "deepSkyBlue1" "" "b" "DC")
-        web=$(grep web <<< "${dcps}" | grep Up)
-        db=$(grep db <<< "${dcps}" | grep Up)
+        web=$(grep web <<< "${dcps}" | grep running)
+        db=$(grep db <<< "${dcps}" | grep running)
 
         web_staus=$(_show "" "" "grey58" "" "" "web" )
         db_staus=$(_show "" "" "grey58" "" "" " db" )
