@@ -150,8 +150,8 @@ function _theme {
     local shell_run_root_icon='#'
     local cmd_time='%*'
     local cmd_date=" | %w "
-    local cmd_status_ok_icon=' ✔ '
-    local cmd_status_error_icon=' ✖ '
+    local cmd_status_ok_icon=' ✅ '
+    local cmd_status_error_icon=' ❌ '
 
     echo "${(P)var}"
 }
@@ -166,7 +166,7 @@ function _theme {
 PROMPT="
 
 $(_show "frame_start_icon" "" "grey27" "" "b") \
-$(_show "" "working_directory" "cyan")\$(show_docker_info)
+$(_show "" "working_directory" "cyan")
 \
 $(_show "frame_middle_icon" "" "grey27" "" "b") \
 \$(show_git_info)
