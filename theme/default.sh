@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-# ================================================
-# font
-# Monoid Nerd Font
-# https://www.nerdfonts.com/font-downloads
-
-# icons
-# https://www.nerdfonts.com/cheat-sheet
-
-# colors
-# https://jonasjacek.github.io/colors/
-# ================================================
-
-
-# shellcheck disable=SC2034  # Unused variables as a theme
 function _theme {
     local var=$1
 
@@ -123,17 +109,6 @@ function _theme {
 
     local git_hidden_icon_color=$grey7
     # ===============================================
-
-
-
-    # ###################################
-    # docker
-    # ###################################
-    local container_status_ok='⬆ '
-    local container_status_exit='⬇ '
-    # ===============================================
-
-
 
     # ###################################
     # prompt
