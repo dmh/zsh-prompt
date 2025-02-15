@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-# ================================================
-# font
-# Monoid Nerd Font
-# https://www.nerdfonts.com/font-downloads
-
-# icons
-# https://www.nerdfonts.com/cheat-sheet
-
-# colors
-# https://jonasjacek.github.io/colors/
-# ================================================
-
-
-# shellcheck disable=SC2034  # Unused variables as a theme
 function _theme {
     local var=$1
 
@@ -124,17 +110,6 @@ function _theme {
     local git_hidden_icon_color=$grey7
     # ===============================================
 
-
-
-    # ###################################
-    # docker
-    # ###################################
-    local container_status_ok='⬆ '
-    local container_status_exit='⬇ '
-    # ===============================================
-
-
-
     # ###################################
     # prompt
     # ###################################
@@ -150,8 +125,8 @@ function _theme {
     local shell_run_root_icon='#'
     local cmd_time='%*'
     local cmd_date=" | %w "
-    local cmd_status_ok_icon=' ✔ '
-    local cmd_status_error_icon=' ✖ '
+    local cmd_status_ok_icon=' ✅ '
+    local cmd_status_error_icon=' ❌ '
 
     echo "${(P)var}"
 }
@@ -166,7 +141,7 @@ function _theme {
 PROMPT="
 
 $(_show "frame_start_icon" "" "grey27" "" "b") \
-$(_show "" "working_directory" "cyan")\$(show_docker_info)
+$(_show "" "working_directory" "cyan")
 \
 $(_show "frame_middle_icon" "" "grey27" "" "b") \
 \$(show_git_info)
